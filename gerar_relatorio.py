@@ -53,7 +53,9 @@ def calcular_estatisticas(resultados):
 def gerar_tabela_resumo(stats_python, stats_c, stats_java, tamanhos):
     """Gera arquivo de texto com tabela resumo formatada"""
     
-    with open('resultados/Tabela1_Resumo_Geral.txt', 'w', encoding='utf-8') as f:
+    os.makedirs('tabelas', exist_ok=True)
+    
+    with open('tabelas/Tabela1_Resumo_Geral.txt', 'w', encoding='utf-8') as f:
         f.write("="*90 + "\n")
         f.write("Tabela 1: Resumo Geral dos Resultados Experimentais\n")
         f.write("Bucket Sort com 1000 baldes e Insertion Sort manual\n")
@@ -261,10 +263,10 @@ def main():
     print("\n" + "="*70)
     print("✅ TABELAS E GRÁFICOS GERADOS COM SUCESSO!")
     print("="*70)
-    print("\nArquivos gerados em 'resultados/':")
-    print("\n📋 TABELA:")
+    print("\nArquivos gerados:")
+    print("\n📋 TABELA (pasta 'tabelas/'):")
     print("  • Tabela1_Resumo_Geral.txt")
-    print("\n📊 GRÁFICOS (PNG 300 DPI + PDF vetorial):")
+    print("\n📊 GRÁFICOS (pasta 'resultados/' - PNG 300 DPI + PDF vetorial):")
     print("  • Gráfico 1: Grafico1_Desempenho_C")
     print("  • Gráfico 2: Grafico2_Desempenho_Java")
     print("  • Gráfico 3: Grafico3_Desempenho_Python")
