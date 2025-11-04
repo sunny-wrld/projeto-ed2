@@ -101,7 +101,7 @@ public class BucketSort {
                     
                     try (PrintWriter writer = new PrintWriter(new FileWriter(arquivoSaida))) {
                         writer.println("n,tempo_ms,run");
-                        writer.printf("%d,%.4f,%d%n", n, tempoMs, execucao);
+                        writer.printf(Locale.US, "%d,%.4f,%d%n", n, tempoMs, execucao);
                     }
                     
                     System.out.printf("Execucao %03d: %.4f ms%n", execucao, tempoMs);
