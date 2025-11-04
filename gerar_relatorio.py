@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import ScalarFormatter
 
-#unteiro gerado por ia
+#inteiro gerado por ia
 
 # Configurações globais para gráficos acadêmicos
 plt.rcParams['font.family'] = 'serif'
